@@ -6,8 +6,8 @@ DA INIZIARE: GUI, WEB SCRAPING E/O PUBLIC API, PROGRAMMA DI CREAZIONE/GESTIONE P
 
 ## GUI
 
-### DA DECIDERE IL LINGUAGGIO, LA PRIORITA' E' LA PORTABILITA' IN OGNI OS E DISPOSITIVO. LA GUI DEVE ESSERE VELOCE, SEMPLICE ED INTUITIVA. LA SCELTA DEL LINGUAGGIO DEVE ESSERE 
-### FATTA IN MODO TALE CHE LA CREAZIONE DELLA GUI SIA RELATIVAMENTE VELOCE E COMODA DA FARE, MA QUESTO PUNTO E' SECONDARIO AL PRIMO, CHE INVECE HA LA PRIORITA'!
+### --- DA DECIDERE IL LINGUAGGIO, LA PRIORITA' E' LA PORTABILITA' IN OGNI OS E DISPOSITIVO. LA GUI DEVE ESSERE VELOCE, SEMPLICE ED INTUITIVA. LA SCELTA DEL LINGUAGGIO DEVE ESSERE
+### --- FATTA IN MODO TALE CHE LA CREAZIONE DELLA GUI SIA RELATIVAMENTE VELOCE E COMODA DA FARE, MA QUESTO PUNTO E' SECONDARIO AL PRIMO, CHE INVECE HA LA PRIORITA'!
 
 per la GUI, penso sia giusto ispirarsi a quella di FINECO BANK, quella dell'app, la stessa di quella del sito, con il balance messo dento un 
 cerchio blu. se si va sul cerchio con il mouse, la parte AVAILABLE si colora di ARANCIONE, se si va sulla parte INVESTED, si colora di CELESTE. 
@@ -35,7 +35,7 @@ cerchio blu e scritto bello grande.
 
 ## PROGRAMMA DI CREAZIONE/GESTIONE PORTAFOGLIO
 
-### USERA' UN ALGORITMO DI INTELLIGENZA ARTIFICIALE E SARA' SCRITTO INTERAMENTE IN PYTHON
+### --- USERA' UN ALGORITMO DI INTELLIGENZA ARTIFICIALE E SARA' SCRITTO INTERAMENTE IN PYTHON
 
 da scrivere in Java o C++, da decidere ancora, aspetto il tuo consiglio roberto.
 Il programma crea la classe del conto, crea una parte investita ed una disponibile, investe i soldi in base al tipo di asset, per esempio:
@@ -55,12 +55,12 @@ immediatamente le posizioni di acquisto e si vende allo scoperto (Ovvero SELL. R
 
 ## INDICATORI DI BORSA
 
-### SCRITTI IN PYTHON
+### --- SCRITTI IN PYTHON
 
 Finire di creare l'indice RSI (che è fatto male)
 
 ## ALGORITMO DI BUY/SELL
 
-### USERA' UN ALGORITMO DI INTELLIGENZA ARTIFICIALE E SARA' SCRITTO INTERAMENTE IN PYTHON
+### --- USERA' UN ALGORITMO DI INTELLIGENZA ARTIFICIALE E SARA' SCRITTO INTERAMENTE IN PYTHON
 
 Una volta sistemato l'RSI, sistemare l'algoritmo e testare i segnali e vedere la frequenza di quelli esatti.
