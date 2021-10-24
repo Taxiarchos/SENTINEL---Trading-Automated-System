@@ -11,11 +11,17 @@ cerchio blu. se si va sul cerchio con il mouse, la parte AVAILABLE si colora di 
 Cliccando sul cerchio nella zona INVESTED, si apre la voce del menù: Portafoglio.
 Sempre nella pagina iniziale, in basso ci saranno 3 riquadri, uno accanto all'altro, in cui ci sarà scritto, AVAILABLE, INVESTED ed infine, TOTAL.
 In alto 3 linee orizzontali denotano il menù, cliccando sulle 3 linee, si apre una tendina da sinistra. Le voci del menù sono:
+
 . Balance
+
 . Portfolio
+
 . Cronologia Investimenti
+
 . Performance
+
 . IMPOSTAZIONI
+
 . Contattaci
 
 Nella sezione cronologia Investimenti, sarà possibile effettuare segnalazioni di investimenti andati in negativo, cioè in cui l'algoritmo non ha funzionato bene.
