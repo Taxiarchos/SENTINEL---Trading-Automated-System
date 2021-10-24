@@ -33,7 +33,11 @@ Calcola la correlazione di pearson tra i vari titoli e strumenti posseduti in po
 Appena i soldi sono investiti, o se ci sono soldi disponibili, l'algoritmo viene avviato ed investe i soldi, i profitti vengono reinvestiti. Se trova una opportunità migliore di
 un altra, chiude quella già aperta ed apre una posizione per il titolo che conviene di più ( questa funzione non è così importante). Se l'utente vuole prelevare dei soldi, se vi
 è disponibilità, si preleva e basta, se non v'è disponibilità, si avverte che bisogna chiudere delle posizioni, e si chiudono le posizioni a più bassa priorità (da capire come
-calcolare la priorità). Si accettano bonifici istantanei in vari modi e si preleva con un bonifico normale o istantaneo in base alla scelta dell'utente di pagare o meno 1€ di commissioni. Creare funzione che calcola la volatilità del portafogli. Tutte le statistiche saranno inserite nella sezione Performance, per dare all'utente un resoconto molto dettagliato. Se il segnale è BUY, si compra con una leva(1,5<=leva<3)
+calcolare la priorità). Si accettano bonifici istantanei in vari modi e si preleva con un bonifico normale o istantaneo in base alla scelta dell'utente di pagare o meno 1€ di
+commissioni. Creare funzione che calcola la volatilità del portafogli. Tutte le statistiche saranno inserite nella sezione Performance, per dare all'utente un resoconto molto
+dettagliato. Se il segnale è BUY, si compra con una leva (1,5<=leva<3), se quando arriva il segnale BUY, vi sono posizioni di vendita aperte, si liquidano immediatamente prima
+di acquistare. Se il segnale è SELL, si vende con leva (3<=leva<=4,5) con margine di protezione!, se quando arriva il segnale ci sono posizioni di BUY aperte, si liquidano
+immediatamente le posizioni di acquisto e si vende allo scoperto (Ovvero SELL. Ricorda roberto, SELL vuol dire vendere allo scoperto).
 
 ## INDICATORI DI BORSA
 
