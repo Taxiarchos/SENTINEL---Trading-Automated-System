@@ -19,7 +19,9 @@ In alto 3 linee orizzontali denotano il menù, cliccando sulle 3 linee, si apre 
 
 Nella sezione cronologia Investimenti, sarà possibile effettuare segnalazioni di investimenti andati in negativo, cioè in cui l'algoritmo non ha funzionato bene.
 Queste segnalazioni serviranno a migliorare il servizio. 
-P.S. nella page principale, in alto ci deve essere scritto SENTINEL (titolo), Automated Trading System (Sottotitolo). I colori dell'app sono: Bianco(sfondo), Blu(scritte), tranne gli elementi che cambiano colore quando si effettua l'hover con il mouse o che si cliccano, i quali cambiano colore temporaneamente. Il balance deve essere al centro del cerchio blu e scritto bello grande.
+P.S. nella page principale, in alto ci deve essere scritto SENTINEL (titolo), Automated Trading System (Sottotitolo). I colori dell'app sono: Bianco(sfondo), Blu(scritte),
+tranne gli elementi che cambiano colore quando si effettua l'hover con il mouse o che si cliccano, i quali cambiano colore temporaneamente. Il balance deve essere al centro del
+cerchio blu e scritto bello grande.
 
 ## PROGRAMMA DI CREAZIONE/GESTIONE PORTAFOGLIO
 
