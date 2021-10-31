@@ -1,9 +1,3 @@
-from plotly.subplots import make_subplots
-import plotly.graph_objects as go
-import pandas as pd
-
-
-
 def Stock_info():
   stock_name = input("Enter the ticker symbol (the code) of the stock you want to analyze: ")
   msft = yf.Ticker(stock_name)
