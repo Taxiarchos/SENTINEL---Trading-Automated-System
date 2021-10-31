@@ -4,6 +4,11 @@ import yfinance as yf
 import nbformat
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
+from 'Technical Indicators' import MA_signal_Fermat
+from 'Technical Indicators' import Bollinger_Signal
+from 'Technical Indicators' import RSI_Signal
+from 'Technical Indicators' import CMO_Signal
+import 'Technical Indicators'
 
 
 
