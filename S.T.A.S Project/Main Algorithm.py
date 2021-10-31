@@ -1,3 +1,11 @@
+import plotly
+import pandas as pd
+import yfinance as yf
+import nbformat
+from plotly.subplots import make_subplots
+import plotly.graph_objects as go
+
+
 
 def Market_Discover_and_Trading_Signal():
     DEFINITIVE = "NO SIGNAL"
