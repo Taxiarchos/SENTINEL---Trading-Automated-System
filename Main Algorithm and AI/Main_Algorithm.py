@@ -32,10 +32,10 @@ def SENTINEL(ticker_list):
         Signal_matrix.append(Signal_list)
     
     perfection = len(Signal_list)
-    reliability = int(float(75*len(Signal_list))/100.0)
+    reliability = int(float(70*len(Signal_list))/100.0)
 
     for i in range(0,len(ticker_list)):
-        ind = Signal_list[i][0]
+        ind = Signal_matrix[i][0]
         for k in range(0,len(ind)):
             nbuys= 0
             nsells= 0
