@@ -49,10 +49,10 @@ def SENTINEL(ticker_list):
                     nsells = nsells + 1
                 elif(value == 'NO SIGNAL'):
                     nosignals = nosignals + 1
-            if(nbuys >= reliability):
+            if(nbuys >= reliability and nbuys < perfection):
                 DEFINITIVE = 'BUY'
                 Final_Signal.append([ticker_list[i], DEFINITIVE, historical_price_list[i][k]])
-            elif(nsells >= reliability):
+            elif(nsells >= reliability and nsells < perfection):
                 DEFINITIVE = 'SELL'
                 Final_Signal.append([ticker_list[i], DEFINITIVE, historical_price_list[i][k]])
             elif(nbuys == perfection):
