@@ -63,4 +63,4 @@ def SENTINEL(ticker_list):
             else:
                 DEFINITIVE = 'NO SIGNAL'
     
-    return(Final_Signal)
+     return(Final_Signal)
