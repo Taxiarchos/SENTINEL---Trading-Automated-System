@@ -7,6 +7,7 @@ from Technical_Indicators import MA_signal_Fermat
 from Technical_Indicators import Bollinger_Signal
 from Technical_Indicators import RSI_Signal
 from Technical_Indicators import CMO_Signal
+from SENTINEL/'DATA MINING'/'STOCK DATA'/Stock_Price_Info import Stock_List_Gen
 
 
 
