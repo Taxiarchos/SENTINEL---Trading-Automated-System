@@ -66,7 +66,7 @@ def MA_signal_Fermat(closing_price):                  #segnale per capire se la 
  
 
 
-def Triple_MA(closing_price):                             #riceve 3 interi e restituisce tre medie mobili
+def Multiple_MA(closing_price):                             #riceve 3 interi e restituisce tre medie mobili
   NumOfMA=input("Number of MA: ")          #una per ogni periodo, il periodo è definito dagli interi
   NumOfMA = int(NumOfMA)
   MArangeList = []
