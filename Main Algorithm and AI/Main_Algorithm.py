@@ -35,8 +35,11 @@ def SENTINEL(ticker_list):
     reliability = int(float(70*len(Signal_list))/100.0)
 
     for i in range(0,len(ticker_list)):
-        ind = Signal_matrix[i][0]
-        for k in range(0,len(ind)):
+        indicator_lenght = []
+        for l in range(0,4):
+            indicator_length.append(len(Signal_matrix[i][l]))
+        ind = min(indicator_length)
+        for k in range(0,ind):
             nbuys= 0
             nsells= 0
             nosignals= 0
