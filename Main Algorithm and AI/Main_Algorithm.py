@@ -110,7 +110,6 @@ def SENTINEL_REDUX(ticker_list):                             #this is the functi
             nosignals= 0
             for n in range(0,4):
                 value = Signal_matrix[i][n][k]
-
                 if(value == 'BUY'):
                     nbuys = nbuys + 1
                 elif(value == 'SELL'):
@@ -132,8 +131,7 @@ def SENTINEL_REDUX(ticker_list):                             #this is the functi
             else:
                 DEFINITIVE = 'NO SIGNAL'
                 Final_Signal.append([ticker_list[i], DEFINITIVE, historical_price_list[i][k]])
-                
-        if(k==(ind-1)):
-            Final_value_Matrix.append([ticker_list[i], DEFINITIVE, historical_price_list[i][k]])
+               
+        Final_value_Matrix.append([ticker_list[i], DEFINITIVE, historical_price_list[i][k]])
     
     return(Final_value_Matrix)
