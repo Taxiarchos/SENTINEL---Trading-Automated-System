@@ -114,10 +114,11 @@ def Test_Efficiency_compound():
     
     
     
-
 def Test_Efficiency_for_Machine_Learning():
     OUTPUT = SENTINEL(ticker_list)
     OUTPUT2 = SENTINEL_and_Indicators_output(ticker_list)
+    Result = 0
+    Result_short = 0
     PorL = []
     buy_price=""
     short_sell_price=""
@@ -143,7 +144,7 @@ def Test_Efficiency_for_Machine_Learning():
                     Result=1
                 #Quello in basso è il valore degli indicatori quando si acquista, il valore degli indicatori quando si vende, prezzo di acquisto, prezzo di vendita, segnale di 
                 #acquisto, segnale di vendita e infine il "Result" che sarà 1 se si perdono soldi o 0 se si è in profitto
-                IMPROVAL_MATRIX.append([OUTPUT2[i][1],OUTPUT2[i][2],OUTPUT2[i][3],OUTPUT2[i][4], OUTPUT[K][1], OUTPUT[K][2] ,OUTPUT[K][3], OUTPUT[K][4], buy_price, sell_price, OUTPUT[i][1], OUTPUT[k][1], Result])
+                IMPROVAL_MATRIX.append([OUTPUT2[i][1],OUTPUT2[i][2],OUTPUT2[i][3],OUTPUT2[i][4], OUTPUT2[K][1], OUTPUT2[K][2] ,OUTPUT2[K][3], OUTPUT2[K][4], buy_price, sell_price, OUTPUT[i][1], OUTPUT[k][1], Result])
                 break
             elif(OUTPUT[k][1] == 'BUY' and tag==1):
                 buy_after_short_price = OUTPUT[k][2]
@@ -153,12 +154,13 @@ def Test_Efficiency_for_Machine_Learning():
                     Result=0
                 elif(Result<=0):
                     Result=1
-                IMPROVAL_MATRIX.append([OUTPUT2[i][1],OUTPUT2[i][2],OUTPUT2[i][3],OUTPUT2[i][4], OUTPUT[K][1], OUTPUT[K][2] ,OUTPUT[K][3], OUTPUT[K][4], buy_price, sell_price, OUTPUT[i][1], OUTPUT[k][1], Result])
+                IMPROVAL_MATRIX.append([OUTPUT2[i][1],OUTPUT2[i][2],OUTPUT2[i][3],OUTPUT2[i][4], OUTPUT2[K][1], OUTPUT2[K][2] ,OUTPUT2[K][3], OUTPUT2[K][4], buy_after_short_price, short_sell_price, OUTPUT[i][1], OUTPUT[k][1], Result])
                 break
             else:
                 pass
             
     return(IMPROVAL_MATRIX)
+
 
     
     
