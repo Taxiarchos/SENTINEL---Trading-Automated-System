@@ -1,4 +1,4 @@
-import Main_Algorithm import SENTINEL, SENTINEL_and_Indicators_output
+import Main_Algorithm import SENTINEL, SENTINEL_redux, SENTINEL_and_Indicators_output
 from Efficiency_Testing import Test_Efficiency_for_Machine_Learning
 
 
