@@ -135,3 +135,62 @@ def SENTINEL_REDUX(ticker_list):                             #this is the functi
         Final_value_Matrix.append([ticker_list[i], DEFINITIVE, historical_price_list[i][k]])
     
     return(Final_value_Matrix)
+
+
+
+def SENTINEL_and_Indicators_output(ticker_list):                 #This function returns also the value of the technical indicators
+    historical_price_list = Stock_List_Gen(ticker_list)          #It will be used in the KNN machine learning algorithm for classification
+                                                                 #The KNN algorithm is necessary for making everytime more reliable signals
+    Signal_list = []
+    Signal_matrix = []
+    Final_Signal = []
+
+    for i in range(0,len(ticker_list)):
+        closing_price = historical_price_list[i]
+
+        ind0 = MA_signal_Fermat(closing_price)
+        ind1 = Bollinger_Signal(closing_price)
+        ind2 = RSI_Signal(closing_price)
+        ind3 = CMO_Signal(closing_price)
+        
+        Signal_list = [ind0,ind1,ind2,ind3]
+        Signal_matrix.append(Signal_list)
+    
+    perfection = len(Signal_list)
+    reliability = int(float(70*len(Signal_list))/100.0)
+
+    for i in range(0,len(ticker_list)):
+        indicator_length = []
+        for l in range(0,4):
+            indicator_length.append(len(Signal_matrix[i][l]))
+        ind = min(indicator_length)
+        for k in range(0,ind):
+            nbuys= 0
+            nsells= 0
+            nosignals= 0
+            for n in range(0,4):
+                value = Signal_matrix[i][n][k]
+
+                if(value == 'BUY'):
+                    nbuys = nbuys + 1
+                elif(value == 'SELL'):
+                    nsells = nsells + 1
+                elif(value == 'NO SIGNAL'):
+                    nosignals = nosignals + 1
+            if(nbuys >= reliability and nbuys < perfection):
+                DEFINITIVE = 'BUY'
+                Final_Signal.append([ticker_list[i], Signal_matrix[i][0][k], Signal_matrix[i][1][k], Signal_matrix[i][2][k], Signal_matrix[i][3][k], DEFINITIVE, historical_price_list[i][k]])
+            elif(nsells >= reliability and nsells < perfection):
+                DEFINITIVE = 'SELL'
+                Final_Signal.append([ticker_list[i], Signal_matrix[i][0][k], Signal_matrix[i][1][k], Signal_matrix[i][2][k], Signal_matrix[i][3][k], DEFINITIVE, historical_price_list[i][k]])
+            elif(nbuys == perfection):
+                DEFINITIVE = 'LEVERAGE-BUY'
+                Final_Signal.append([ticker_list[i], Signal_matrix[i][0][k], Signal_matrix[i][1][k], Signal_matrix[i][2][k], Signal_matrix[i][3][k], DEFINITIVE, historical_price_list[i][k]])
+            elif(nsells == perfection):
+                DEFINITIVE = 'LEVERAGE-SELL'
+                Final_Signal.append([ticker_list[i], Signal_matrix[i][0][k], Signal_matrix[i][1][k], Signal_matrix[i][2][k], Signal_matrix[i][3][k], DEFINITIVE, historical_price_list[i][k]])
+            else:
+                DEFINITIVE = 'NO SIGNAL'
+                Final_Signal.append([ticker_list[i], Signal_matrix[i][0][k], Signal_matrix[i][1][k], Signal_matrix[i][2][k], Signal_matrix[i][3][k], DEFINITIVE, historical_price_list[i][k]])
+    
+    return(Final_Signal)
