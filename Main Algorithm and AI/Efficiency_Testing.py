@@ -28,15 +28,14 @@ def Test_Efficiency():
             else:
                 pass
 
-    PL_total = 10
+    Starting = 10
     PL_total_list = []
     real_simple_yield = 0
     Profit_sum = 0
 
     for R in range(0,len(PorL)):
-        PL_total = PL_total*PorL[R]
-        PL_total_list.append(PL_total)
-        PL_total = 10
+        PL = Starting*PorL[R]
+        PL_total_list.append(PL)
     
     Profit_sum = sum(PL_total_list)
     
