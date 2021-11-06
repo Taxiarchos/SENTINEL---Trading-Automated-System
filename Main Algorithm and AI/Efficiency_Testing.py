@@ -1,7 +1,7 @@
 from Main_Algorithm import SENTINEL
 
 
-def Test_Efficiency():
+def Test_Efficiency_simple():
     OUTPUT = SENTINEL(ticker_list)
     PorL = []
     buy_price=""
