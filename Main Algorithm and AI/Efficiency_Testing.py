@@ -2,7 +2,7 @@ from Main_Algorithm import SENTINEL
 from Main_Algorithm import SENTINEL_and_Indicators_output
 
 
-def Test_Efficiency_simple():
+def Test_Efficiency_simple(ticker_list):
     OUTPUT = SENTINEL(ticker_list)
     PorL = []
     buy_price=""
@@ -55,7 +55,7 @@ def Test_Efficiency_simple():
     
     
     
-def Test_Efficiency_compound():
+def Test_Efficiency_compound(ticker_list):
     OUTPUT = SENTINEL(ticker_list)
     PorL = []
     buy_price=""
@@ -114,7 +114,7 @@ def Test_Efficiency_compound():
     
     
     
-def Test_Efficiency_for_Machine_Learning():
+def Test_Efficiency_for_Machine_Learning(ticker_list):
     OUTPUT = SENTINEL(ticker_list)
     OUTPUT2 = SENTINEL_and_Indicators_output(ticker_list)
     Result = 0
@@ -160,7 +160,3 @@ def Test_Efficiency_for_Machine_Learning():
                 pass
             
     return(IMPROVAL_MATRIX)
-
-
-    
-    
