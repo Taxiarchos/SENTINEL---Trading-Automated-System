@@ -3,25 +3,25 @@ WEBSITES FOR WEB-SCRAPING
 
 -- Crypto
 
-  -- https://it.investing.com/crypto/currencies
+  ---- https://it.investing.com/crypto/currencies
   
-  -- https://it.investing.com/crypto/bitcoin/historical-data (al posto di bitcoin va il nome di una crypto)
+  ---- https://it.investing.com/crypto/bitcoin/historical-data (al posto di bitcoin va il nome di una crypto)
   
 -- Futures
 
- -- INDICI
+ ---- INDICI
  
-   --
+   ------
   
- -- MATERIE PRIMI
+ ---- MATERIE PRIMI
  
-   --
+   ------
  
- -- ALTRI
+ ---- ALTRI
   
-   -- 
+   ------
   
 -- Forex
 
-  --
-  --
+  ----
+  ----
