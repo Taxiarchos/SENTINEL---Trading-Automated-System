@@ -1,3 +1,6 @@
+import yfinance as yf
+
+
 def Stock_plot(stock_name):                                          #stock_name è una Stringa contenente il ticker code dell'azione
   stock_data= yf.download(stock_name, interval="1d")
   stock_data.reset_index(inplace=True)
