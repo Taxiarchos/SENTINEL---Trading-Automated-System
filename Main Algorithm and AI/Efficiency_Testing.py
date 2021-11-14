@@ -119,7 +119,6 @@ def Test_Efficiency_for_Machine_Learning(ticker_list):
     OUTPUT2 = SENTINEL_and_Indicators_output(ticker_list)
     Result = 0
     Result_short = 0
-    PorL = []
     buy_price=""
     short_sell_price=""
     sell_price=""
@@ -137,7 +136,6 @@ def Test_Efficiency_for_Machine_Learning(ticker_list):
             if(OUTPUT[k][1] == 'SELL' and tag==0):
                 sell_price=OUTPUT[k][2]
                 Result = (((sell_price - buy_price)/buy_price)*100)
-                PorL.append(Result)
                 if(Result>0):
                     Result=0
                 elif(Result<=0):
@@ -149,7 +147,6 @@ def Test_Efficiency_for_Machine_Learning(ticker_list):
             elif(OUTPUT[k][1] == 'BUY' and tag==1):
                 buy_after_short_price = OUTPUT[k][2]
                 Result = (((short_sell_price - buy_after_short_price)/buy_after_short_price)*100)
-                PorL.append(Result_short)
                 if(Result>0):
                     Result=0
                 elif(Result<=0):
