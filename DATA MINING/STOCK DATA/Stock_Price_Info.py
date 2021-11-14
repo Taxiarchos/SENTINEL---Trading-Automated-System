@@ -1,7 +1,7 @@
 import yfinance as yf
 
 
-def Stock_List_Gen(ticker_list):
+def Stock_List_Gen(ticker_list):  #Ticker_list must be a list of stocks' ticker codes and indexes' ticker codes (for instance: 'TSLA' for TESLA and 'NDX' for NASDAQ100)
     historical_price_list = []
     
     for stock_name in ticker_list:       
