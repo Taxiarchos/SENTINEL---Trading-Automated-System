@@ -144,17 +144,17 @@ def Test_Efficiency_for_Machine_Learning(ticker_list):
                     Result=1
                 #Quello in basso è il valore degli indicatori quando si acquista, il valore degli indicatori quando si vende, prezzo di acquisto, prezzo di vendita, segnale di 
                 #acquisto, segnale di vendita e infine il "Result" che sarà 1 se si perdono soldi o 0 se si è in profitto
-                IMPROVAL_MATRIX.append([OUTPUT2[i][1],OUTPUT2[i][2],OUTPUT2[i][3],OUTPUT2[i][4], OUTPUT2[K][1], OUTPUT2[K][2] ,OUTPUT2[K][3], OUTPUT2[K][4], buy_price, sell_price, OUTPUT[i][1], OUTPUT[k][1], Result])
+                IMPROVAL_MATRIX.append([OUTPUT2[i][1],OUTPUT2[i][2],OUTPUT2[i][3],OUTPUT2[i][4], OUTPUT2[k][1], OUTPUT2[k][2] ,OUTPUT2[k][3], OUTPUT2[k][4], buy_price, sell_price, OUTPUT[i][1], OUTPUT[k][1], Result])
                 break
             elif(OUTPUT[k][1] == 'BUY' and tag==1):
                 buy_after_short_price = OUTPUT[k][2]
-                Result_short = (((short_sell_price - buy_after_short_price)/buy_after_short_price)*100)
+                Result = (((short_sell_price - buy_after_short_price)/buy_after_short_price)*100)
                 PorL.append(Result_short)
                 if(Result>0):
                     Result=0
                 elif(Result<=0):
                     Result=1
-                IMPROVAL_MATRIX.append([OUTPUT2[i][1],OUTPUT2[i][2],OUTPUT2[i][3],OUTPUT2[i][4], OUTPUT2[K][1], OUTPUT2[K][2] ,OUTPUT2[K][3], OUTPUT2[K][4], buy_after_short_price, short_sell_price, OUTPUT[i][1], OUTPUT[k][1], Result])
+                IMPROVAL_MATRIX.append([OUTPUT2[i][1],OUTPUT2[i][2],OUTPUT2[i][3],OUTPUT2[i][4], OUTPUT2[k][1], OUTPUT2[k][2] ,OUTPUT2[k][3], OUTPUT2[k][4], buy_after_short_price, short_sell_price, OUTPUT[i][1], OUTPUT[k][1], Result])
                 break
             else:
                 pass
