@@ -1,27 +1,9 @@
-def Stock_info():
-  stock_name = input("Enter the ticker symbol (the code) of the stock you want to analyze: ")
-  msft = yf.Ticker(stock_name)
-  print("Now, a description of the stock and the company...\n")
+def Stock_plot(stock_name):                                          #stock_name è una Stringa contenente il ticker code dell'azione
+  stock_data= yf.download(stock_name, interval="1d")
+  stock_data.reset_index(inplace=True)
 
-  info=[["Info", msft.info],["historical market data", msft.history(period="max")],["Actions", msft.actions],["Dividends", msft.dividends],["Splits", msft.splits],["Financials", msft.financials],
-        ["Quarterly financials", msft.quarterly_financials],["Major holders", msft.major_holders],["Institutional holders", msft.institutional_holders],["Balance sheet", msft.balance_sheet],
-        ["Quarterly Balance sheet", msft.quarterly_balance_sheet], ["Cash Flow", msft.cashflow], ["Quarterly cash flow", msft.quarterly_cashflow], ["Earnings", msft.earnings],
-        ["Quarterly earnings", msft.quarterly_earnings], ["Sustainability", msft.sustainability],  ["Recommendations", msft.recommendations], ["Calendar of next events", msft.calendar],
-        ["Options expirations", msft.options]]
-
-  for i in range(0,19):            #questo ciclo for scrive il nome del dataset e il dataset
-      print(info[i][0])            #tipo "info" seguito dal dataset msft.info, "historical market data" seguito da msft.history(period="max")
-      dataset=pd.DataFrame(info[i][1])
-      print(dataset)
-      print("\n")
-
-      
-def Stock_plot():
-  stock_price=pd.DataFrame(info[1][1])
-  stock_price.reset_index(inplace=True)
-
-  closing_price=stock_price["Close"]   #stock_price[close] viene salvato in closing_price perchè servirà spesso più avanti!!
-  Date=stock_price["Date"]
+  closing_price=stock_data["Close"]   #stock_data["Close"] viene salvato in closing_price perchè servirà spesso più avanti!!
+  Date=stock_data["Date"]
 
   stockplot = px.line(x=Date, y=closing_price, labels=dict(x="Date", y="Price"))
   stockplot.show()
