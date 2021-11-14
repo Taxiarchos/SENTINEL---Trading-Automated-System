@@ -8,6 +8,9 @@ from Technical_Indicators import Bollinger_Signal
 from Technical_Indicators import RSI_Signal
 from Technical_Indicators import CMO_Signal
 from SENTINEL/'DATA MINING'/'STOCK DATA'/Stock_Price_Info import Stock_List_Gen
+from SENTINEL/'DATA MINING'/'FOREX DATA'/
+from SENTINEL/'DATA MINING'/'CRYPTOCURRENCIES DATA'/
+from SENTINEL/'DATA MINING'/'FUTURES AND COMMODITIES DATA'/
 
 
 
