@@ -9,8 +9,8 @@ CREATE TABLE Registry (
 
 CREATE TABLE Wallet (
    id INTEGER(11) FOREIGN KEY NOT NULL,
-   portafoglio VARCHAR(1000) NOT NULL
-                        );
+   wallet VARCHAR(1000) NOT NULL      -- da capire come creare la lista di ticker code degli asset da inserire nella voce "wallet"
+                        );            -- dovrebbe essere qualcosa del tipo aapl,tsla,pypl,btc,...
                         
                  
 CREATE TABLE Balance (
