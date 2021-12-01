@@ -2,9 +2,6 @@ from dbmodule import connect
 import SENTINEL/'Main Algorithm and AI'/Main_Algorithm
 import SENTINEL/'Main Algorithm and AI'/Efficiency_Testing
 
-Cursor_USER = connection_USER.cursor() #Cursor object for USER_DB
-connection_USER = connect('USER_DB', 'username', 'pwd') #creating connection object to USER_DB
-
 def AI_Database_Data_Uploader():
     connection_AI = connect('AI_DB', 'username', 'pwd') #creating connection object to AI_DB
     Cursor_AI = connection_AI.cursor() #Cursor object for AI_DB
