@@ -1,4 +1,4 @@
-import Main_Algorithm import SENTINEL_REDUX, SENTINEL_and_Indicators_output
+from Main_Algorithm import SENTINEL_REDUX, SENTINEL_and_Indicators_output
 from Efficiency_Testing import Test_Efficiency_for_Machine_Learning
 from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.model_selection import train_test_split
