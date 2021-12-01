@@ -1,3 +1,6 @@
+CREATEDB AI_DB
+
+
 CREATE TABLE AI_Dataset (                      -- 0 is buy, 1 is sell
    fermat_signal_opening INTEGER(1) NOT NULL,
    bollinger_opening INTEGER(1) NOT NULL,  
