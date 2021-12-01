@@ -11,5 +11,5 @@ CREATE TABLE AI_Dataset (                      -- 0 is buy, 1 is sell
    closing_price INTEGER(1) NOT NULL,
    final_signal_opening INTEGER(1) NOT NULL,
    final_signal_closing INTEGER(1) NOT NULL,
-   result INTEGER(1) NOT NULL                   -- 0 is positive result, 1 is neutral or negative
+   result INTEGER(1) PRIMARY KEY NOT NULL                   -- 0 is positive result, 1 is neutral or negative
    );
