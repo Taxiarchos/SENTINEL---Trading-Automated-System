@@ -1,6 +1,35 @@
 from dbmodule import connect  
 import SENTINEL/'Main Algorithm and AI'/Main_Algorithm
 import SENTINEL/'Main Algorithm and AI'/Efficiency_Testing
+import hashlib
+                                                          #THIS PART IS DEDICATED TO THE USER DATABASE
+
+class User:
+    def __init__(self, id, name, surname, email, password):
+        self.id = id
+        self.name = name 
+        self.surname = surname
+        self.email = email
+        self.password = password
+        self.password_hash = hashlib.sha512(password).hexdigest()
+    
+    def Add():
+        connection_USER = connect('USER_DB', 'username', 'pwd') #creating connection object to USER_DB
+        Cursor_USER = connection_USER.cursor() #Cursor object for USER_DB
+
+        try:
+            Cursor_USER.execute('''
+            INSERT INTO TABLE Registry(id, name, surname, email, password_hash)
+            VALUES({User.id}, {User.name}, {User.surname}, {User.email}, {User.password_hash});
+            ''')
+        except:
+            print("Unexpected error in uploading data into the Database Target")
+        else:
+            return 0
+        
+
+                                                          #THIS PART IS DEDICATED TO THE AI DATABASE
+
 
 def AI_Database_Data_Uploader():
     connection_AI = connect('AI_DB', 'username', 'pwd') #creating connection object to AI_DB
@@ -40,7 +69,7 @@ def AI_Database_Data_Uploader():
     
 
 #time to fetch data
-def Database_data_fetcher():
+def AI_Database_data_fetcher():
     connection_AI = connect('AI_DB', 'username', 'pwd') #creating connection object to AI_DB
     Cursor_AI = connection_AI.cursor() #Cursor object for AI_DB
 
