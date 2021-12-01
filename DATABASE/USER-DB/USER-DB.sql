@@ -1,4 +1,4 @@
-CREATEDB USER_DB
+createdb USER_DB
 
 
 CREATE TABLE Registry ( 
