@@ -2,19 +2,19 @@ CREATE TABLE Registry (
    id INTEGER(11) PRIMARY KEY NOT NULL,
    name VARCHAR(100) NOT NULL,
    surname VARCHAR(100) NOT NULL,
-   email VARCHAR(300) NOT NULL,
+   email VARCHAR(300) NOT NULL UNIQUE,
    password_hash VARCHAR(64) NOT NULL
                         );
                         
 
 CREATE TABLE Wallet (
-   id INTEGER(11) FOREIGN KEY NOT NULL,
+   id INTEGER(11) FOREIGN KEY NOT NULL REFERENCES Registry(id),
    wallet_basket VARCHAR(1000) NOT NULL      -- da capire come creare la lista di ticker code degli asset da inserire nella voce "wallet_basket"
                         );                   -- dovrebbe essere qualcosa del tipo aapl,tsla,pypl,btc,...
                         
                  
 CREATE TABLE Balance (
-   id INTEGER(11) FOREIGN KEY NOT NULL,
+   id INTEGER(11) FOREIGN KEY NOT NULL REFERENCES Registry(id),
    total INTEGER(12) NOT NULL,
    invested INTEGER(12) NOT NULL,
    available INTEGER(12) NOT NULL
@@ -22,7 +22,7 @@ CREATE TABLE Balance (
                      
                     
 CREATE TABLE Stats (
-   id INTEGER(11) FOREIGN KEY NOT NULL,
+   id INTEGER(11) FOREIGN KEY NOT NULL REFERENCES Registry(id),
    porl_cumulative INTEGER(10) NOT NULL,
    porl_jan INTEGER(10) NOT NULL,
    porl_feb INTEGER(10) NOT NULL,
