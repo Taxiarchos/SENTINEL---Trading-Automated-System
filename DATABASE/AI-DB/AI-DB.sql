@@ -1,4 +1,4 @@
-CREATEDB AI_DB
+CREATE DATABASE AI_DB
 
 
 CREATE TABLE AI_Dataset (                      -- 0 is buy, 1 is sell
