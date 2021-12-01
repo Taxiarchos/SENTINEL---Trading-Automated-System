@@ -42,12 +42,3 @@ y_pred = classifier.predict(X_test)
 
 print(confusion_matrix(y_test, y_pred))
 print(classification_report(y_test, y_pred))
-
-def Intelligent_Investor(OUTPUT):
-  Final_confirm = classifier(TO_CHECK)
-  if(Final_confirm == TO_CHECK[1]):
-    #Effettua acquisto
-  else:
-    #NON effettuare acquisto
-
-
