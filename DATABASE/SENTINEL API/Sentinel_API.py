@@ -69,7 +69,7 @@ def AI_Database_Data_Uploader():
     
 
 #time to fetch data
-def AI_Database_data_fetcher():
+def AI_Database_Data_fetcher():
     connection_AI = connect('AI_DB', 'username', 'pwd') #creating connection object to AI_DB
     Cursor_AI = connection_AI.cursor() #Cursor object for AI_DB
 
