@@ -215,8 +215,6 @@ def Bollinger_plot():
 
 
 def RSI(closing_price,flag=True):                               #cerca su wikipedia la formula del Relative Strenght Index
-    import pandas as pd                                 
-    
     if(flag):
         timeframe_int = 14
         timeframe = float(timeframe_int)
@@ -231,7 +229,9 @@ def RSI(closing_price,flag=True):                               #cerca su wikipe
     for i in range(0,len(closing_price)):
         if (i==0):
             closing_price_diff_major = 0
-            closing_price_diff_major = 0
+            closing_price_diff_minor = 0
+            Bigdiff_list.append(closing_price_diff_major)
+            Lildiff_list.append(closing_price_diff_minor)
         else:
             if (closing_price[i] > closing_price[i-1]):
                 closing_price_diff_major = closing_price[i] - closing_price[i-1]
@@ -245,22 +245,26 @@ def RSI(closing_price,flag=True):                               #cerca su wikipe
                 Lildiff_list.append(0)
                 Bigdiff_list.append(0)
             
-            if (i-timeframe < 0):
-                Major_Average = sum(Bigdiff_list[0:i])/(timeframe)
-                Minor_Average = sum(Lildiff_list[0:i])/(timeframe)
-            else:
-                Major_Average = sum(Bigdiff_list[(i-timeframe_int):i])/(timeframe)
-                Minor_Average = sum(Lildiff_list[(i-timeframe_int):i])/(timeframe)
-                
-            if (Minor_Average == 0 and Major_Average > 0):
-                RSI = 100
-                RSI_list.append(RSI)
-            elif (Minor_Average == 0 and Major_Average == 0):
-                pass
-            else:
-                RS = Major_Average/Minor_Average
-                RSI = 100 - (100/(1+RS))
-                RSI_list.append(RSI)
+        if (i-timeframe_int < 0):
+            Major_Average = sum(Bigdiff_list[0:i])/(timeframe)
+            Minor_Average = sum(Lildiff_list[0:i])/(timeframe)
+        elif(i==timeframe_int):
+            Major_Average = sum(Bigdiff_list[0:timeframe_int])/(timeframe)
+            Minor_Average = sum(Lildiff_list[0:timeframe_int])/(timeframe)
+        else:
+            Major_Average = sum(Bigdiff_list[(i-timeframe_int):i])/(timeframe)
+            Minor_Average = sum(Lildiff_list[(i-timeframe_int):i])/(timeframe)
+            
+        if (Minor_Average == 0 and Major_Average > 0):
+            RSI = 100
+            RSI_list.append(RSI)
+        elif (Minor_Average == 0 and Major_Average == 0):
+            RSI = 50
+            RSI_list.append(RSI)
+        else:
+            RS = Major_Average/Minor_Average
+            RSI = 100 - (100/(1+RS))
+            RSI_list.append(RSI)
                 
     RSI_df=pd.DataFrame(RSI_list)
     RSI_df.rename(columns={0:'RSI'}, inplace= True)
