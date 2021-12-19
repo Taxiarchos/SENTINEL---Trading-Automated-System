@@ -1,4 +1,6 @@
 import yfinance as yf
+import pandas as pd
+import math                 #importing the required libraries
 
 
 def Stock_plot(stock_name):                                          #stock_name è una Stringa contenente il ticker code dell'azione
@@ -168,7 +170,6 @@ def MAplot():
   
   
 def Bollinger(closing_price):                              #crea le bande di bollinger
-    import math
     BigDS = []
     MiniDS = []
     SqrdErr=0
